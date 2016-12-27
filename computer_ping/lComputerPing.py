@@ -42,7 +42,7 @@ while attemptsLeft > 0:
         alertBox(' is down at this time! Tried for 1 hour.')
     else:
         print('Attempt ' + str(attemptNumber) + ': ' + hostName + ' is down, trying again in 10 minutes.')
-#        time.sleep(600)
+        time.sleep(600)
         print()
     attemptNumber += 1
     attemptsLeft  -= 1
