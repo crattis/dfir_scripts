@@ -23,7 +23,7 @@ def alertBox(pingResult):
     fileObj.close()
     subprocess.Popen(['notepad.exe', hostName + '_ping_result.txt'])
 
-#try pinging the host over the course of an hour, stops when host is up.
+#try pinging the host over the course of an hour, stops when the target is up.
 print()
 attemptsLeft  = 6
 attemptNumber = 1
