@@ -5,7 +5,7 @@
 # load needed libraries
 import os, time, subprocess, sys
 
-# check for command line arguments
+# check for command line arguments, ask for target if none provided.
 if len(sys.argv) > 1:
     hostName = (sys.argv[1])
 else:
