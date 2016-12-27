@@ -1,7 +1,7 @@
 # DFIR_Scripts
-Scripts I wrote for use in different DFIR related activities. These aren't the greatest, mainly used for scratching repeditive itches I get while working. Also just stuff I did to learn python.
+Scripts (shell, python, etc), I wrote for use in different DFIR related activities. These are things I wrote to improve my scripting skills and used for scratching repeditive itches.
 
-# Computer Ping.
+# Computer Ping (Python).
   This script is designed to ping a host name or ip address for up to 60 minutes, once every 10 minutes. It stops when it can either ping the box, or when the hour is up. The script will load a text file when the script completes.
 
 There are three versions of the script, depending on the environment
