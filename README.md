@@ -9,4 +9,4 @@ There are three versions of the script, depending on the environment
  * cwComputerPing.py - For use on Windows computers with Cygwin.
  * wComputerPing.py - For Windows running Python.
  
- Linux on Windows (Ubuntu on Windows) has not been tested, nor supported that this time.
+ Linux on Windows (Ubuntu on Windows) does not appear to support ping, when this was tested.
