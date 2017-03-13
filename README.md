@@ -16,3 +16,4 @@ There are three versions of the script, depending on the environment
 
 Current versions of the script, dependant upon environment
  * lHttpExtractor.py - This is for use on GNU/Linux based systems.
+ * cyHttpExtractor.py - For use on Windows Computers with Cygwin.
