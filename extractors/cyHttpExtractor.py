@@ -21,7 +21,7 @@ else:
 	myFileName = input("What file has the data?: ")
 
 dom_check = []
-dom_url = re.compile(r'https?:\/\/[^\/]+:?')
+dom_url = re.compile(r'[a-zA-Z\-\.]+:\/\/[^\/]+:?')
 
 # Open the user provided file as read-only, build a list from the file, and
 # close.
