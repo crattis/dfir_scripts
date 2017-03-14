@@ -22,7 +22,7 @@ else:
 	myFileName = input("What file has the data?: ")
 
 dom_check = []
-dom_url = re.compile(r'(https?|meows?|hxxps?):\/\/[^\/]+:?')
+dom_url = re.compile(r'(https?|meows?|hxxps?|woofs?):\/\/[^\/]+:?')
 
 # Open the user provided file as read-only, build a list from the file, and
 # close.
