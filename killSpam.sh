@@ -10,7 +10,7 @@
 # version 1.0
 ###############################################################################
 
-
+echo ''
 for quarfile in $(ls -1);
 do
         # list number of remaining emails
