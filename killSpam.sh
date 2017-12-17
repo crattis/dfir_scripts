@@ -14,6 +14,7 @@ echo ''
 for quarfile in $(ls -1);
 do
         # list number of remaining emails
+        echo "---"
         ls -1 | wc -l
         echo "---"
 
@@ -31,21 +32,21 @@ do
         fi
 
         # relase to mailbox or delete file
-        read -p "Do you want to Release or Delete the file? (r/d): " RorD
+        read -p "[*] Do you want to Release or Delete the file? (r/d): " RorD
         cRorD=$(echo -n $RorD | tr A-Z a-z)
         if [ X"$cRorD" = X"r" ];
         # release the file to the recipient
         then
                 amavisd-release $quarfile
-                echo "email released to user "
+                echo "[+] email released to user "
         elif [ X"$cRorD" = X"d" ];
         # delete the file
         then
                 rm $quarfile
-                echo "email deleted "
+                echo "[+] email deleted "
         else
         # do nothing and go to next file.
-        echo 'nothing done to email, moving to next one'
+        echo '[-] nothing done to email, moving to next one'
         fi
         echo ''
 done
