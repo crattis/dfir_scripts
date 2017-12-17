@@ -17,3 +17,6 @@ There are three versions of the script, depending on the environment
 Current versions of the script, dependant upon environment
  * lHttpExtractor.py - This is for use on GNU/Linux based systems.
  * cyHttpExtractor.py - For use on Windows Computers with Cygwin.
+
+# killSpam.sh (Shell Script for Linux)
+Works with files in SpamAssassin's quarantine folder. Shows the To, From, Date, and Subject lines, and then asks to release email to recipient or delete the email. 
