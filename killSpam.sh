@@ -7,11 +7,12 @@
 # Chris J
 # @rattis
 #
-# version 1.0
+# version 0.5
 ###############################################################################
 
 echo ''
-for quarfile in $(ls -1);
+workDir=$(basename `pwd`)
+for quarFile in $(ls -1);
 do
         # list number of remaining emails
         echo "---"
@@ -19,15 +20,15 @@ do
         echo "---"
 
         ## start email block
-        echo "$quarfile:"
+        echo "$quarFile:"
         # is it zipped or unzipped, and display
-        testFile=$(file --mime-type -b $quarfile)
+        testFile=$(file --mime-type -b $quarFile)
         if [ "$testFile" = 'application/gzip' ];
         then
-                zgrep -E '^(To|From|Subject|Date)\: ' $quarfile
+                zgrep -E '^(To|From|Subject|Date)\: ' $quarFile
                 echo ''
         else
-                egrep '^(To|From|Subject|Date)\: ' $quarfile
+                egrep '^(To|From|Subject|Date)\: ' $quarFile
                 echo ''
         fi
 
@@ -37,12 +38,14 @@ do
         if [ X"$cRorD" = X"r" ];
         # release the file to the recipient
         then
-                amavisd-release $quarfile
-                echo "[+] email released to user "
+                releaseFile="$workDir/$quarFile"
+                amavisd-release $releaseFile
+                echo "[+] email released to user and removed from quarantine "
+                rm $quarFile
         elif [ X"$cRorD" = X"d" ];
         # delete the file
         then
-                rm $quarfile
+                rm $quarFile
                 echo "[+] email deleted "
         else
         # do nothing and go to next file.
@@ -50,3 +53,4 @@ do
         fi
         echo ''
 done
+
