@@ -22,4 +22,4 @@ Current versions of the script, dependent upon environment
 * killSpam.sh - Works with files in SpamAssassin's quarantine folder. Shows the To, From, Date, and Subject lines, and then asks to release email to recipient or delete the email.
 * b64Decode.sh - cli script to convert user supplied base64 text to ASCII
 * hexDecode.bsh - cli script to convert user supplied hexadecimal to ASCII
-* uHits.sh - quick way to call sort | uniq -c | sort -rn on a file supllied as argument by user. Because I got tired of typing the sort line
+* uHits.sh -  A quick script to take a file name from the user to sort, remove duplicates with count, and sort result. Looking for Unique Hits (uHits)
