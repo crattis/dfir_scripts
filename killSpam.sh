@@ -5,7 +5,7 @@
 # email to the user mailbox or delete the email from the system.
 #
 # Chris J
-# @rattis
+# [@]rattis
 #
 # version 0.5
 ###############################################################################
