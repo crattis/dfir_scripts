@@ -1,1 +1,0 @@
-[place string to be decoded here. if does not run, take out space, blank lines, and make sure hex is one line (or word wrapped no new line)] 
