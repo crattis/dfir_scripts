@@ -11,6 +11,14 @@ There are three versions of the script, depending on the environment
  
  Linux on Windows (Ubuntu on Windows) does not appear to support ping, when this was tested.
 
+# Base64 and Hex decoders (Python and compiled exe for Windows).
+  These will convert base64 or hexadecimal in the associated text file (base64.txt or hex.txt) and make it human readable. The script and input files need to stay in the same folder, output file will also be in that folder. Note on the Hex, make sure there is no line breaks or spaces. All hex strings have to be one line for the script to work.
+  
+  Python scripts, run like all python scripts and require python 3.6 or higher to be installed.
+  
+  Exe versions are fully self-contained Windows executables. Change input file’s data to what needs to be decoded, save, and double click exe. Then check the generated output file.
+
+
 # HTTP Extractor (Python).
   This script is designed to take a file containing HTTP links that need to have the host information extracted for IOCs or block lists. It was originally designed to take the output of a web based tool (copied and pasted to a text file) and only show one http:// host data / for all instances in the text file. It works on fanged and de-fanged domains and ip addresses, and catches HTTP and HTTPS.
 
