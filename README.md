@@ -12,6 +12,8 @@ There are three versions of the script, depending on the environment
  Linux on Windows (Ubuntu on Windows) does not appear to support ping, when this was tested.
 
 # Base64 and Hex decoders (Python and compiled exe for Windows).
+  Similar to the 2 shell scripts below, but written in python and use a file instead of a command line argument (by request).
+  
   These will convert base64 or hexadecimal in the associated text file (base64.txt or hex.txt) and make it human readable. The script and input files need to stay in the same folder, output file will also be in that folder. Note on the Hex, make sure there is no line breaks or spaces. All hex strings have to be one line for the script to work.
   
   Python scripts, run like all python scripts and require python 3.6 or higher to be installed.
