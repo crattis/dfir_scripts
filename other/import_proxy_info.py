@@ -3,10 +3,10 @@
 http_proxy  = '<PUT YOUR PROXY INFORMATION HERE>'
 https_proxy = '<PUT YOUR PROXY INFORMATION HERE>'
 
-fproxy = {
+myProxy = {
         'http': http_proxy,
         'https': https_proxy
         }
 
 if __name__ == "__main__":
-    print(fproxy)
+    print(myProxy)
