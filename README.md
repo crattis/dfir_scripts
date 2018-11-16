@@ -29,7 +29,7 @@ Current versions of the script, dependent upon environment
  
 # Other
   Scripts that are still being worked on, not quite ready - test at your own risk.
-   * import_proxy_info.py - for those times when you're behind a proxy and have the proxy information to fill in. Usage: Put in to same directory you're working in.  from import_proxy_info.py import myProxy. Then when requests or other need proxy, proxy=myProxy
+   * import_proxy_info.py - for those times when you're behind a proxy and have the proxy information to fill in. Usage: Put in to same directory you're working in.  from import_proxy_info.py import my_proxy. Then when requests or other need proxy, proxy=my_proxy
 
 # Shellscripts (Shell / Bourne-Again SHell)
 * killSpam.sh - Works with files in SpamAssassin's quarantine folder. Shows the To, From, Date, and Subject lines, and then asks to release email to recipient or delete the email.
