@@ -3,50 +3,53 @@
 # This version is for Windows running Python under Cygwin.
 
 # load needed libraries
-import os, time, subprocess, sys
+import logging
+import os
+import time
+import subprocess
+import sys
 
+# TODO make all these ping python files into a callable modular function.
 # check for command line arguments, ask for target if none provided.
 if len(sys.argv) > 1:
-    hostName = (sys.argv[1])
+    host_name = (sys.argv[1])
 else:
-    hostName = input("What host are you looking for? (Enter hostname or ip address):  ")
+    host_name = input("What host are you looking for? (Enter hostname or ip address):  ")
 
-# Function to call windows ping.
-def pingComputer(pingThis):
-    response = os.system('ping -n 1 -w 100 ' + pingThis + ' > /dev/null 2>&1')
-    return  response
 
-# Function to open Notepad.exe with the result of final ping (Up or Down)
-def alertBox(pingResult):
-    fileObj = open(hostName + '_ping_result.txt', 'w')
-    fileObj.write(hostName + pingResult)
-    fileObj.close()
-    subprocess.Popen(['notepad.exe', hostName + '_ping_result.txt'])
+def ping_computer(ping_this):
+    """Function to call windows ping."""
+    response = os.system('ping -n 1 -w 100 ' + ping_this + ' > /dev/null 2>&1')
+    return response
 
-#try pinging the host over the course of an hour, stops when the target is up.
-print()
-attemptsLeft  = 6
-attemptNumber = 1
 
-while attemptsLeft > 0:
-    upDown = pingComputer(hostName)
-    if upDown == 0:
-        print('Attempt ' + str(attemptNumber) + ': ' + hostName + ' is up!')
-        print()
-        alertBox(' is up at this time!')
+def alert_box(ping_result):
+    """Function to open Notepad.exe with the result of final ping (Up or Down)"""
+    file_object = open(host_name + '_ping_result.txt', 'w')
+    file_object.write(host_name + ping_result)
+    file_object.close()
+    subprocess.Popen(['notepad.exe', host_name + '_ping_result.txt'])
+
+
+# try pinging the host over the course of an hour, stops when the target is up.
+attempts_left = 6
+attempt_number = 1
+
+while attempts_left > 0:
+    up_down = ping_computer(host_name)
+    if up_down == 0:
+        # TODO make these 3 statements into a function you can pass the last string parameter through.
+        logging.info('Attempt ' + str(attempt_number) + ': ' + host_name + ' is up!')
+        alert_box(' is up at this time!')
         break
-    elif attemptsLeft == 1:
-        print('Attempt ' + str(attemptNumber) + ': ' + hostName + ' is down! Ping attempts ended')
-        print()
-        alertBox(' is down at this time! Tried for 1 hour.')
+    elif attempts_left == 1:
+        logging.info('Attempt ' + str(attempt_number) + ': ' + host_name + ' is down! Ping attempts ended')
+        alert_box(' is down at this time! Tried for 1 hour.')
     else:
-        print('Attempt ' + str(attemptNumber) + ': ' + hostName + ' is down, trying again in 10 minutes.')
+        logging.info('Attempt ' + str(attempt_number) + ': ' + host_name + ' is down, trying again in 10 minutes.')
         time.sleep(600)
-        print()
-    attemptNumber += 1
-    attemptsLeft  -= 1
+    attempt_number += 1
+    attempts_left -= 1
 # sleep 5 seconds to allow Operating System to open the file, then remove file.
 time.sleep(5)
-os.remove(hostName + '_ping_result.txt')
-    
-
+os.remove(host_name + '_ping_result.txt')
