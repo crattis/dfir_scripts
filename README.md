@@ -25,8 +25,8 @@ There are three versions of the script, depending on the environment
 
 Current versions of the scriptis modular. Still need to set up setup.py to import. 
  * uri_extrator.py - written for Python 3, needs to be called by python.
- * lHttpExtractor.py - REMOVED
- * cyHttpExtractor.py - REMOVED
+ * ~~lHttpExtractor.py~~ - REMOVED
+ * ~~cyHttpExtractor.py~~ - REMOVED
  
 # Other
   Scripts that are still being worked on, not quite ready - test at your own risk.
