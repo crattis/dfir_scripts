@@ -20,11 +20,11 @@ There are three versions of the script, depending on the environment
   
   Exe versions are fully self-contained Windows executables. Change input file’s data to what needs to be decoded, save, and double click exe. Then check the generated output file.
 
-# HTTP Extractor (Python).
+# URI Extractor (Python).
   This script is designed to take a file containing URI links that need to have the host information extracted. It was originally designed to take the output of a web based tool (copied and pasted to a text file) and only show one host for all instances in the text file. It works on fanged and de-fanged URI, and catches HTTP, HTTPS, FTP, FTPS, LDAP, SFTP, etc.
 
 Current versions of the scriptis modular. Still need to set up setup.py to import. 
- * http_extrator.py - written for Python 3, needs to be called by python.
+ * uri_extrator.py - written for Python 3, needs to be called by python.
  * lHttpExtractor.py - REMOVED
  * cyHttpExtractor.py - REMOVED
  
