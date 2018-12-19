@@ -21,11 +21,12 @@ There are three versions of the script, depending on the environment
   Exe versions are fully self-contained Windows executables. Change input file’s data to what needs to be decoded, save, and double click exe. Then check the generated output file.
 
 # HTTP Extractor (Python).
-  This script is designed to take a file containing HTTP links that need to have the host information extracted for IOCs or block lists. It was originally designed to take the output of a web based tool (copied and pasted to a text file) and only show one http:// host data / for all instances in the text file. It works on fanged and de-fanged domains and ip addresses, and catches HTTP and HTTPS.
+  This script is designed to take a file containing URI links that need to have the host information extracted. It was originally designed to take the output of a web based tool (copied and pasted to a text file) and only show one host for all instances in the text file. It works on fanged and de-fanged URI, and catches HTTP, HTTPS, FTP, FTPS, LDAP, SFTP, etc.
 
-Current versions of the script, dependent upon environment
- * lHttpExtractor.py - This is for use on GNU/Linux based systems.
- * cyHttpExtractor.py - For use on Windows Computers with Cygwin.
+Current versions of the scriptis modular. Still need to set up setup.py to import. 
+ * http_extrator.py - written for Python 3, needs to be called by python.
+ * lHttpExtractor.py - REMOVED
+ * cyHttpExtractor.py - REMOVED
  
 # Other
   Scripts that are still being worked on, not quite ready - test at your own risk.
